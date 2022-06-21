@@ -1,15 +1,28 @@
-# Basic Sample Hardhat Project
+# Projeto Mande um Salve
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Projeto simples que recebe uma mensagem e a guarda na blockchain, também tem uma pequena chance de receber uma quantidade de ether de volta.
 
-Try running some of the following tasks:
+# Tecnologias utilizadas
 
+- Hardhat
+- Ethers
+- Solidity
+- Javascript
+- Alchemy
+- Chai
+# inicialização do projeto
+
+Execute o seguinte comando para inicializar as dependências do projeto:
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+  npm install
 ```
+Logo após instalar as dependências, execute o comando para compilar nosso contrato: 
+```shell
+  npx hardhat compile
+```
+Após a compilação poderemos fazer o deploy do nosso contrato na rede de teste (rinkeby) com o comando:
+```shell
+  npx hardhat run scripts/run.js --network rinkeby
+```
+
+obs: Lembre-se de adicionar sua chave privada e sua key URL da plataforma Alchemy no arquivo `.env` antes de compilar o contrato.
